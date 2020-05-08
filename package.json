@@ -1,0 +1,15 @@
+{
+  "name": "remind-me-of-this-video",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Samuel Denani <samueldenani2@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -f ./main.css",
+    "start": "yarn run clean && gulp sass && gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}

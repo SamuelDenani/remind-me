@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Remind me of this video",
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/watch?*"],
+            "css": ["thirdParty/datedropper/youtube-remind-me.css", "main.css"],
+            "js": ["thirdParty/jquery/jquery-3.5.0.min.js", "thirdParty/datedropper/datedropper.pro.min.js", "index.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "scripts": ["thirdParty/jquery/jquery-3.5.0.min.js", "thirdParty/datedropper/datedropper.pro.min.js"]
+    }
+}

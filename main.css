@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+#yt-remindme {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #E52F50, #743ad5);
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  outline: none;
+  margin: auto 1em;
+  padding: 0;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer; }
+  #yt-remindme::before, #yt-remindme::after {
+    content: '';
+    position: absolute;
+    background-color: #aaa;
+    bottom: 50%;
+    margin: auto; }
+  #yt-remindme::before {
+    width: 1px;
+    height: 40%; }
+  #yt-remindme::after {
+    left: 50%;
+    width: 35%;
+    height: 1px; }
+
+#div.style-scope.ytd-sentiment-bar-renderer {
+  margin-left: 5em !important; }
+
+.yt-remindme-modal {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out; }
+  .yt-remindme-modal.is--active {
+    visibility: visible;
+    opacity: 1; }
+  .yt-remindme-modal--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5, 5, 5, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  .yt-remindme-modal--inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    background-color: #181818;
+    border-radius: 5px;
+    margin: auto;
+    padding: 2em;
+    width: 45vw;
+    height: 30vh; }
+    .yt-remindme-modal--inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, #E52F50, #743ad5);
+      border-radius: 5px 0;
+      margin: -5px;
+      width: 100%;
+      height: 100%;
+      z-index: -1; }
+    .yt-remindme-modal--inner__heading {
+      font-size: 3em;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #E52F50, #743ad5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    .yt-remindme-modal--inner__datepicker {
+      width: 50%; }
+      .yt-remindme-modal--inner__datepicker input {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Nunito', sans-serif;
+        background: linear-gradient(to right, #E52F50, #743ad5);
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        padding: 0.5em;
+        width: 100%;
+        cursor: pointer; }
+        .yt-remindme-modal--inner__datepicker input:last-child {
+          margin-top: 15px;
+          cursor: text; }
+        .yt-remindme-modal--inner__datepicker input::placeholder {
+          color: #ffffff; }
+    .yt-remindme-modal--inner__actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 75%; }
+      @media (min-width: 1920px) {
+        .yt-remindme-modal--inner__actions {
+          width: 50%; } }
+      .yt-remindme-modal--inner__actions button {
+        position: relative;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Nunito', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: none;
+        border-radius: 3px;
+        padding: 1em 3em;
+        outline: none;
+        cursor: pointer;
+        transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; }
+        .yt-remindme-modal--inner__actions button:first-child {
+          background-color: #E52F50; }
+        .yt-remindme-modal--inner__actions button:last-child {
+          background-color: #743ad5; }
+        .yt-remindme-modal--inner__actions button:hover {
+          box-shadow: #eda304 -3px 2px 0;
+          transform: translateX(4px) translateY(-4px); }
+
+body div.datedropper:not(.picker-clean) .pick:first-of-type, body div.datedropper:not(.picker-clean) .pick:first-of-type * {
+  color: #ffffff !important; }

@@ -1,0 +1,27 @@
+
+/*
+
+  INSTRUCTIONS ---------------------------------------------------------------------------------
+  
+  1. Add this stylesheet to the <head> of your pages
+     <link href="YOUR PATH/Youtube Remind Me.css" rel="stylesheet" type="text/css" />
+     
+  2. Use the file name as data-dd-theme attribute on your datedropper elements
+     <input data-dd-theme="Youtube Remind Me" />
+     
+*/
+
+
+div.datedropper.youtube-remind-me {
+
+  --dd-color1: #E52F50;
+  --dd-color2: #181818;
+  --dd-color3: #743ad5;
+  --dd-color4: #743ad5;
+
+  --dd-radius: 10px;
+  --dd-width: 192px;
+  --dd-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.23);
+
+}
+

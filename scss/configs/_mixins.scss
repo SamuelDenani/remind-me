@@ -1,0 +1,5 @@
+@mixin breakpoint($maxOrMin: max-width, $width: 768) {
+    @media (#{$maxOrMin}: #{$width}px) {
+        @content
+    }
+}

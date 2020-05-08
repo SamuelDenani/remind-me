@@ -1,0 +1,117 @@
+.yt-remindme-modal {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    &.is--active {
+        visibility: visible;
+        opacity: 1;
+    }
+    &--overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(5, 5, 5, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    &--inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        position: relative;
+        background-color: $ytBackground;
+        border-radius: 5px;
+        margin: auto;
+        padding: 2em;
+        width: 45vw;
+        height: 30vh;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $gradient;
+            border-radius: 5px 0;
+            margin: -5px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        &__heading {
+            font-size: 3em;
+            font-weight: 700;
+            font-family: 'Nunito', sans-serif;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &__datepicker {
+            width: 50%;
+            input {
+                color: $colorWhite;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: 'Nunito', sans-serif;
+                background: $gradient;
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                padding: 0.5em;
+                width: 100%;
+                cursor: pointer;
+                &:last-child {
+                    margin-top: 15px;
+                    cursor: text;
+                }
+                &::placeholder {
+                    color: $colorWhite;
+                }
+            }
+        }
+        &__actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 75%;
+            @include breakpoint(min-width, 1920) {
+                width: 50%;
+            }
+            button {
+                position: relative;
+                color: $colorWhite;
+                font-size: 18px;
+                font-weight: 700;
+                font-family: 'Nunito', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border: none;
+                border-radius: 3px;
+                padding: 1em 3em;
+                outline: none;
+                cursor: pointer;
+                transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+                &:first-child {
+                    background-color: $colorPink;
+                }
+                &:last-child {
+                    background-color: $colorPurple;
+                }
+                &:hover {
+                    box-shadow: $colorOrange -3px 2px 0;
+                    transform: translateX(4px) translateY(-4px);
+                }
+            }
+        }
+    }
+}
+
+body div.datedropper:not(.picker-clean) .pick:first-of-type, body div.datedropper:not(.picker-clean) .pick:first-of-type * {
+    color: $colorWhite!important;
+}

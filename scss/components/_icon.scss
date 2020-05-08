@@ -1,0 +1,35 @@
+#yt-remindme {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    background: $gradient;
+    border: 1px solid $ytFont;
+    border-radius: 50%;
+    outline: none;
+    margin: auto 1em;
+    padding: 0;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $ytFont;
+        bottom: 50%;
+        margin: auto;
+    }
+    &::before {
+        width: 1px;
+        height: 40%;
+    }
+    &::after {
+        left: 50%;
+        width: 35%;
+        height: 1px;
+    }
+}
+
+#div.style-scope.ytd-sentiment-bar-renderer {
+    margin-left: 5em!important;
+}
